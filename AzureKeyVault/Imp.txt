@@ -1,0 +1,6 @@
+
+// To generate certificate
+
+makecert -sv mykey.pvk -n "cn=KeyVaultCertificate" KeyVaultCertificate.cer -b 01/01/2024 -e 01/01/2030 -r
+
+pvk2pfx -pvk mykey.pvk -spc KeyVaultCertificate.cer -pfx KeyVaultCertificate.pfx -po Kiran@96
